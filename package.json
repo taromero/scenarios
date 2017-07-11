@@ -1,0 +1,33 @@
+{
+  "name": "scenarios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scenarios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "deep-diff": "^0.3.8",
+    "dot-prop": "^4.1.1",
+    "incoming-message-hash": "^3.2.2",
+    "recursive-readdir": "^2.2.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "tcp-port-used": "^0.1.2",
+    "yakbak": "git+https://git@github.com/taromero/yakbak.git#3.0.0",
+    "yargs": "^8.0.2"
+  },
+  "devDependencies": {
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "ignore": [
+      "/backend_tapes/",
+      "/frontend_tapes/"
+    ]
+  }
+}

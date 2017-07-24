@@ -60,7 +60,7 @@ function * listJsonPaths (dirname) {
 }
 
 function * getJson (filepath) {
-  var jsonString = yield loadFile(path.join(__dirname, filepath))
+  var jsonString = yield loadFile(path.join(process.cwd(), filepath))
   return JSON.parse(jsonString)
 
   function loadFile (filepath) {

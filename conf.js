@@ -1,4 +1,6 @@
 var path = require('path')
+var custom = require(path.join(process.cwd(), 'scenarios.conf'))
+
 var argv = require('yargs').argv
 var mode = argv.mode
 
@@ -20,11 +22,11 @@ var baseConf = {
 
 var proxyConf = {
   feOpts: {
-    baseDir: path.join(__dirname, baseConf.isTesting ? baseConf.frontendTestingDir : baseConf.frontendDir),
+    baseDir: path.join(process.cwd(), baseConf.isTesting ? baseConf.frontendTestingDir : baseConf.frontendDir),
     dirname: 'foo'
   },
   beOpts: {
-    dirname: path.join(__dirname, baseConf.backendDir)
+    dirname: path.join(process.cwd(), baseConf.backendDir)
   }
 }
 
@@ -35,4 +37,5 @@ var testerConf = {
 }
 
 module.exports = Object.assign(baseConf,
-    Object.assign(proxyConf, testerConf))
+    Object.assign(proxyConf,
+    Object.assign(testerConf, custom)))

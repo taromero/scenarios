@@ -1,4 +1,8 @@
-module.exports = [
+var path = require('path')
+module.exports = require(path.join(process.cwd(), 'scenarios'))
+
+/*
+var sample = [
   {
     label: 'This is my scenario label',
     url: '/some/scenario/url',
@@ -16,3 +20,4 @@ module.exports = [
     ]
   }
 ]
+*/

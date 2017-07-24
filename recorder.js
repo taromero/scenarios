@@ -22,6 +22,7 @@ module.exports = {
         }
 
         return request('http://localhost:' + conf.frontendProxyPort + scenario.url + useCase.query)
+          .catch((err) => conf.showErrors && console.log('error on request', err))
       }
     }
 
